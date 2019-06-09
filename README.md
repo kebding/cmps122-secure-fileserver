@@ -9,6 +9,7 @@ In phase 3, we took feedback from phase 2 and tried to secure the server against
 This repository only contains the final version because I (foolishly) did not develop the project in Git and merely uploaded the result after completion.
 
 
+
 The lab journal I wrote for the course is included below:
 
 I implemented the assignment by creating two primary functions, `httpGet` and `httpPost`,
@@ -45,14 +46,20 @@ my peers missed in Phase II, with the `getcwd()` and `mkdir()` C functions
 should be impossible because _every_ time I copy or concatenate user input, I bound the function
 by using `strncpy()` and `strncat()` and making sure that it copies no further than the end of the
 destination array.
+
 Pages referenced:
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/​ used various subpages for info
 and examples on HTTP header formats
+
 https://stackoverflow.com/questions/5457608/how-to-remove-the-character-at-a-given-index-fro
-m-a-string-in-c​ gave me the idea for how to scrub any “../” from the input filename
+m-a-string-in-c​ gave me the idea for how to scrub any `../` from the input filename
+
 https://en.wikipedia.org/wiki/List_of_HTTP_status_codes​ for reference on correct response
 codes
+
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies​ for reference on cookie format
-https://superuser.com/questions/1158551/getting-the-parent-directory-with-curl​ to find out that
+
+https://superuser.com/questions/1158551/getting-the-parent-directory-with-curl​ to verify that
 one can indeed use relative paths to reach a parent directory
-ttps://www.tutorialspoint.com/c_standard_library/​ various subpages for C function reference
+
+https://www.tutorialspoint.com/c_standard_library/​ various subpages for C function reference
