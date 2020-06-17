@@ -1,5 +1,7 @@
 # secure-fileserver
 
+NOTE: this server is not intended for real-world use.
+
 This repository contains the result of my final project for my Computer Security class. The goal of the project was to design a multi-threaded, multi-user file server that is secure against attackers. While no specific attacks were specified in the lab spec, the goal is defend against whatever attacks my peers could muster. 
 
 The project was built in phases. In phase 1, we created our initial build for the server. 
@@ -48,11 +50,12 @@ by using `strncpy()` and `strncat()` and making sure that it copies no further t
 destination array.
 
 Pages referenced:
+
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/​ used various subpages for info
 and examples on HTTP header formats
 
-https://stackoverflow.com/questions/5457608/how-to-remove-the-character-at-a-given-index-from-a-string-in-c​ 
-gave me the idea for how to scrub any `../` from the input filename
+https://stackoverflow.com/questions/5457608/how-to-remove-the-character-at-a-given-index-from-a-string-in-c​ gave 
+me the idea for how to scrub any `../` from the input filename
 
 https://en.wikipedia.org/wiki/List_of_HTTP_status_codes​ for reference on correct response
 codes
