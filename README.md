@@ -24,7 +24,7 @@ the filepath (and if they did include their directory in the filepath, it is rem
 Implementing cookies was fairly straightforward except in how it messed with the
 existing functions. Because cookies were not part of the original implementation, I just added a
 helper function verifyCookie to check if the cookie was valid and called the function from within
-httpGet and `httpPost`. For generating cookies I implemented a login function to be called from
+`httpGet` and `httpPost`. For generating cookies I implemented a login function to be called from
 within `httpPost` if the destination endpoint is `/login` that checks if the username and password
 provided match those in a predefined `users` file. If so, a random cookie is generated. I heard
 from a classmate that seeding the `rand()` function with just `time(NULL)` is a terrible idea because
@@ -40,7 +40,7 @@ basic functionality was if I could access other users’ directories by includin
 the request) causes the child process to crash. Lastly, I tried buffer overflow attacks of varying 
 lengths to see if it could affect or break the server in any way.
 
-In Phase III I replaced the `system()` call I had, which could potentially be an attack vector that
+In Phase III, I replaced the `system()` call I had, which could potentially be an attack vector that
 my peers missed in Phase II, with the `getcwd()` and `mkdir()` C functions 
 (learned from reading submissions in Phase II). I believe buffer overflow attacks
 should be impossible because _every_ time I copy or concatenate user input, I bound the function
@@ -51,8 +51,8 @@ Pages referenced:
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/​ used various subpages for info
 and examples on HTTP header formats
 
-https://stackoverflow.com/questions/5457608/how-to-remove-the-character-at-a-given-index-fro
-m-a-string-in-c​ gave me the idea for how to scrub any `../` from the input filename
+https://stackoverflow.com/questions/5457608/how-to-remove-the-character-at-a-given-index-from-a-string-in-c​ 
+gave me the idea for how to scrub any `../` from the input filename
 
 https://en.wikipedia.org/wiki/List_of_HTTP_status_codes​ for reference on correct response
 codes
